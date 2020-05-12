@@ -85,7 +85,5 @@ class ViewController: UIViewController {
         }
         print("Накопления = \(savings), стипендия = \(scholarship), месячная инфляция = \(inflation), расходы = \(expenses) можно прожить = \(month) месяцев")
     }
-    
-
 }
 
