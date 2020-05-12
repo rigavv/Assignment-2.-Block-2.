@@ -5,11 +5,8 @@
 //  Created by Viktor Riga on 12.05.2020.
 //  Copyright © 2020 Viktor Riga. All rights reserved.
 //
-
 //
-//Задача 3. У студента имеются накопления 2400 грн. Ежемесячная стипендия составляет 700 гривен, а расходы на проживание превышают ее и составляют 1000 грн. в месяц. Рост цен ежемесячно увеличивает расходы на 3%. Определить, сколько месяцев сможет прожить студент, используя только накопления и стипендию.
-//
-//Задача 4. 2хзначную цело численную переменную типа 25, 41, 12. После выполнения вашей программы у вас в другой переменной должно лежать это же число только задом на перед 52, 14, 21
+//Задача 4. 2х значную цело численную переменную типа 25, 41, 12. После выполнения вашей программы у вас в другой переменной должно лежать это же число только задом на перед 52, 14, 21
 //
 //Пример с числом 52
 //
@@ -32,6 +29,7 @@ class ViewController: UIViewController {
         print("Task 3")
         howManyMonths (savings: 2400, scholarship: 700, inflation: 0.03, expenses: 1000)
         print("Task 4")
+        backwards(number: 543)
     }
 
 // Manhattan Island was acquired by settlers for $ 24 in 1826. What would be the current state of their account if these 24 dollars were then deposited in a bank at 6% of annual income?
@@ -85,5 +83,25 @@ class ViewController: UIViewController {
         }
         print("Накопления = \(savings), стипендия = \(scholarship), месячная инфляция = \(inflation), расходы = \(expenses) можно прожить = \(month) месяцев")
     }
+    
+// Task 4. A 2-digit integer variable of type 25, 41, 12. After executing your program, you should have the same number in another variable only backwards before 52, 14, 21
+    
+    
+    func backwards (number:Int) {
+      
+        var num = number
+        var backnumber = 0
+        var center: Int
+        
+        while num > 0 {
+            center = num % 10
+            num = num / 10
+            backnumber = backnumber * 10
+            backnumber = backnumber + center
+        }
+      print ("Развернутое число \(number) = \(backnumber) ")
+        
+    }
+    
 }
 
