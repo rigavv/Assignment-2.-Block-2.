@@ -55,14 +55,14 @@ class ViewController: UIViewController {
                                     inflation: Double,
                                     month: Int){
         var spending = expenses
-        var Money : Double = 0
+        var money : Double = 0
         
         for _ in 1...month {
-            Money += scholarship
+            money += scholarship
             spending += spending * inflation
-            Money -= spending
+            money -= spending
         }
-        print("Нужно иметь сумму из", abs(Money))
+        print("Нужно иметь сумму из", abs(money))
     }
     
 // Task 3. The student has savings of 2400 UAH. The monthly scholarship is 700 hryvnias, and living expenses exceed it and amount to 1000 UAH. per month. Rising prices monthly increases spending by 3%. Determine how many months a student can live using only savings and a scholarship.
